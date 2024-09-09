@@ -3,14 +3,20 @@
 <% content_for :title, "Movies" %>
 
 <h1>Movies</h1>
-
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
-</div>
-
+<table>
+  <thead>
+    <tr>
+      <th><%= link_to "Title", :sort => "title"%></th>
+      <th><%= link_to "Rating", :sort => "rating"%></th>
+      <th><%= link_to "Release Date", :sort => "release_date"%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <div id="movies">
+      <% @movies.each do |movie| %>
+        <%= render movie %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
 <%= link_to "New movie", new_movie_path %>
