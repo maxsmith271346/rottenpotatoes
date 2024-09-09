@@ -1,3 +1,3 @@
 web: bundle exec rails server -p $PORT
-heroku run rails db:migrate
-heroku run rails db:seed
+worker: heroku run rails db:migrate
+worker: heroku run rails db:seed
