@@ -6,9 +6,9 @@
 <table>
   <thead>
     <tr>
-      <th><%= link_to "Title", :sort => "title"%></th>
-      <th><%= link_to "Rating", :sort => "rating"%></th>
-      <th><%= link_to "Release Date", :sort => "release_date"%></th>
+      <th><%= sort_movies("Title", "title") %></th>
+      <th><%= sort_movies("Rating", "rating") %></th>
+      <th><%= sort_movies("Release Date", "release_date") %></th>
     </tr>
   </thead>
   <tbody>
@@ -19,4 +19,4 @@
     </div>
   </tbody>
 </table>
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path(column: params[:column], order: params[:order]) %>
