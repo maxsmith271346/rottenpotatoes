@@ -2,13 +2,24 @@
 
 <% content_for :title, "Movies" %>
 
-<h1>Movies</h1>
+<div class="centered">
+  <h1 class="centered-title">Movies</h1>
+</div>
 <table>
   <thead>
     <tr>
-      <th><%= sort_movies("Title", "title") %></th>
-      <th><%= sort_movies("Rating", "rating") %></th>
-      <th><%= sort_movies("Release Date", "release_date") %></th>
+      <th class="<%= 'sorted-asc' if params[:column] == 'title' && params[:order] == 'asc' %>
+        <%= 'sorted-desc' if params[:column] == 'title' && params[:order] == 'desc' %>">
+        <%= sort_movies("Title", "title") %>
+      </th>
+      <th class="<%= 'sorted-asc' if params[:column] == 'rating' && params[:order] == 'asc' %>
+        <%= 'sorted-desc' if params[:column] == 'rating' && params[:order] == 'desc' %>">
+        <%= sort_movies("Rating", "rating") %>
+      </th>
+      <th class="<%= 'sorted-asc' if params[:column] == 'release_date' && params[:order] == 'asc' %>
+        <%= 'sorted-desc' if params[:column] == 'release_date' && params[:order] == 'desc' %>">
+        <%= sort_movies("Release Date", "release_date") %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -19,4 +30,6 @@
     </div>
   </tbody>
 </table>
-<%= link_to "New movie", new_movie_path(column: params[:column], order: params[:order]) %>
+<div class="centered">
+  <%= link_to "New movie", new_movie_path(column: params[:column], order: params[:order]), class: "btn" %>
+</div>

@@ -1,15 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  width: 33.33%;
+}
+
+tr {
+  border: 1px solid #ddd; /* Add border to table rows */
+}
+
+th.sorted-asc {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+th.sorted-desc {
+  background-color: #f8d7da; /* Corrected background color */
+  color: #721c24; /* Corrected text color */
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.centered-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

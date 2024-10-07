@@ -1,6 +1,6 @@
 <%= form_with(model: movie, url: movie.persisted? ? 
   movie_path(movie, column: params[:column], order: params[:order]) :
-  movies_path(column: params[:column], order: params[:order])) do |form| %>
+  movies_path(column: params[:column], order: params[:order]), html: { class: 'centered-form' }) do |form|%>
   <% if movie.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -13,27 +13,27 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="centered">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div class="centered">
     <%= form.label :rating, style: "display: block" %>
     <%= form.text_field :rating %>
   </div>
 
-  <div>
+  <div class="centered">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
-  <div>
+  <div class="centered">
     <%= form.label :release_date, style: "display: block" %>
     <%= form.text_field :release_date %>
   </div>
 
-  <div>
+  <div class="btn">
     <%= form.submit %>
   </div>
 <% end %>
