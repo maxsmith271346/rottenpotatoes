@@ -9,5 +9,5 @@
 <br>
 
 <div class="btn">
-  <%= link_to "Back to movies", movies_path %>
+  <%= link_to "Back to movies", movies_path(column: params[:column], order: params[:order]), class: "btn" %>
 </div>
