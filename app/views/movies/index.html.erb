@@ -25,7 +25,11 @@
   <tbody>
     <div id="movies">
       <% @movies.each do |movie| %>
-        <%= render movie %>
+        <tr>
+          <td><%= link_to movie.title, movie_path(movie, column: params[:column], order: params[:order]) %></td>
+          <td><%= movie.rating %></td>
+          <td><%= movie.release_date %></td>
+        </tr>
       <% end %>
     </div>
   </tbody>
